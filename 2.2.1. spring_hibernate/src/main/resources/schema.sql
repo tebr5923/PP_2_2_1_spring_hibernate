@@ -1,3 +1,6 @@
+DROP table if exists users;
+DROP table if exists car;
+
 CREATE TABLE IF NOT EXISTS car
 (
     id     bigint       NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -14,6 +17,3 @@ CREATE TABLE IF NOT EXISTS users
     car_id    bigint          NOT NULL,
     FOREIGN KEY (car_id) REFERENCES car (id)
 );
-
-DROP table users;
-DROP table car;
